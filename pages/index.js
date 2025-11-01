@@ -1,5 +1,5 @@
 function Home() {
-    return <h1>Testando alteração através do --amend</h1>
+    return <h1>Atualizando informações, estudos para dev.</h1>
 }
 
 export default Home;
