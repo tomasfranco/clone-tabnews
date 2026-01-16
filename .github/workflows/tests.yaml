@@ -3,7 +3,6 @@ name: Automated Tests
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-  push:
 
 jobs:
   jest:
@@ -14,7 +13,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: "lts/hydrogen"
 
       - run: npm ci
       - run: npm test
