@@ -12,10 +12,10 @@
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
     "lint:eslint:check": "next lint --dir .",
-    "test": "npm run services:up && npm run wait-for-postgres && npm run migration:up && concurrently --success first --kill-others --names next,jest --hide next \"next dev -p 3000\" \"jest --runInBand\"",
+    "test": "npm run services:up && npm run wait-for-postgres && npm run migrations:up && concurrently --success first --kill-others --names next,jest --hide next \"next dev -p 3000\" \"jest --runInBand\"",
     "test:watch": "jest --watchAll --runInBand",
-    "migration:create": "node-pg-migrate -m infra/migrations create",
-    "migration:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
+    "migrations:create": "node-pg-migrate -m infra/migrations create",
+    "migrations:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
     "prepare": "husky",
     "commit": "cz"
   },
